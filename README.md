@@ -2,7 +2,7 @@
 
 Proyek pengembangan website **EduConnect** untuk mata kuliah **Desain Web (Semester 3)**. EduConnect merupakan platform edukasi yang dirancang untuk membantu siswa SMP dan SMA/SMK dalam mengakses materi pembelajaran, mengajukan pertanyaan, serta berdiskusi dengan pengguna lain.
 
-## 🔗 Design Reference
+## Design Reference
 
 **Figma – EduConnect UI/UX Design**
 
@@ -12,7 +12,7 @@ Mockup Figma digunakan sebagai acuan utama dalam proses implementasi tampilan we
 
 ---
 
-## 💡 Konsep dan Fitur Website
+## Konsep dan Fitur Website
 
 EduConnect memiliki beberapa halaman utama dengan fitur sebagai berikut:
 
@@ -58,7 +58,7 @@ EduConnect memiliki beberapa halaman utama dengan fitur sebagai berikut:
 
 ---
 
-## 🖥️ Konsep Tata Letak Dashboard
+## Konsep Tata Letak Dashboard
 
 ### 1. Navbar Atas (Header Terhubung)
 - Berwarna putih (`#FFFFFF`).
@@ -92,7 +92,7 @@ Komponen dashboard:
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## Teknologi yang Digunakan
 
 | Teknologi | Kegunaan |
 |---|---|
@@ -105,7 +105,7 @@ Komponen dashboard:
 
 ---
 
-## 📱 Responsive Design
+## Responsive Design
 
 Website dikembangkan menggunakan pendekatan **Responsive Web Design** agar dapat digunakan pada berbagai ukuran layar.
 
@@ -126,7 +126,7 @@ Seluruh halaman diusahakan tidak memiliki horizontal scrolling.
 
 ---
 
-## 🎨 Design System
+## Design System
 
 ### Color Palette
 
@@ -154,7 +154,7 @@ Seluruh halaman diusahakan tidak memiliki horizontal scrolling.
 
 ---
 
-## 📂 Struktur Folder
+## Struktur Folder
 
 Contoh struktur folder proyek:
 
@@ -190,7 +190,7 @@ EduConnect/
 Struktur tersebut merupakan rancangan organisasi file dan dapat disesuaikan dengan perkembangan implementasi proyek.
 ---
 
-## 📌 Ruang Lingkup Proyek
+## Ruang Lingkup Proyek
 
 Proyek ini berfokus pada pengembangan antarmuka website menggunakan HTML, CSS, Bootstrap 5, dan JavaScript.
 
