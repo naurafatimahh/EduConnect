@@ -188,17 +188,6 @@ EduConnect/
 ```
 
 Struktur tersebut merupakan rancangan organisasi file dan dapat disesuaikan dengan perkembangan implementasi proyek.
-
----
-
-## 🚀 Cara Menjalankan Proyek
-
-1. Clone repository atau download source code proyek.
-2. Buka folder `EduConnect` menggunakan Visual Studio Code.
-3. Pastikan seluruh file dan folder berada pada struktur yang sesuai.
-4. Jalankan file `index.html` menggunakan browser atau ekstensi Live Server.
-5. Website dapat diakses melalui browser.
-
 ---
 
 ## 📌 Ruang Lingkup Proyek
