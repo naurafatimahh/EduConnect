@@ -34,8 +34,40 @@ Proyek ini dikembangkan sebagai tugas mata kuliah Desain Web Semester 3.
 - **CSS3** untuk layout, komponen, warna, dan responsivitas.
 - **Bootstrap 5.3.2** untuk grid dan utilitas antarmuka.
 - **Bootstrap Icons 1.11.3** untuk ikon.
-- **Google Fonts/Poppins** untuk tipografi.
+- **Google Fonts:** Poppins sebagai primary font dan Inter sebagai secondary font.
 - Tanpa backend dan database; data pada prototipe bersifat statis.
+
+## Standar Desain Singkat
+
+### Color Palette
+
+- **Primary Blue:** `#1D68F5`
+- **Primary Hover:** `#1554C9`
+- **Primary Light:** `#EAF2FF`
+- **White / Surface:** `#FFFFFF`
+- **Page Background:** `#F8FAFC`
+- **Heading:** `#0F172A`
+- **Body Text:** `#334155`
+- **Secondary Text:** `#475569`
+- **Muted Text:** `#64748B`
+- **Border:** `#E2E8F0`
+- **Border Strong:** `#CBD5E1`
+- **Hover Border:** `#93C5FD`
+- **Success:** `#22C55E`
+
+### Jenis dan Ukuran Font
+
+- **Primary font:** Poppins, sans-serif.
+- **Secondary font:** Inter, sans-serif.
+- **Font weight:** `400`, `500`, `600`, dan `700`.
+- **Logo:** `1.3rem` / sekitar `20.8px`.
+- **Judul halaman/banner:** `1.55rem-1.6rem` / sekitar `24.8-25.6px`.
+- **Judul kartu/pertanyaan:** `1rem` / sekitar `16px`.
+- **Nama pengguna, menu, dan input:** `0.95rem` / sekitar `15.2px`.
+- **Deskripsi:** `0.88rem-0.92rem` / sekitar `14.1-14.7px`.
+- **Metadata dan badge:** `0.8rem` / sekitar `12.8px`.
+
+Standar visual lengkap, termasuk spacing, border radius, shadow, komponen, interaksi, dan responsivitas, tersedia pada [docs/DESIGN.md](docs/DESIGN.md).
 
 ## Struktur Project
 

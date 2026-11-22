@@ -73,7 +73,9 @@ Gunakan warna dari mockup Figma sebagai sumber final jika terdapat perbedaan det
 
 ### 5.2 Typography
 
-- **Font family:** Poppins.
+- **Primary font:** Poppins.
+- **Secondary font:** Inter.
+- **Font stack:** Poppins sebagai teks utama dan Inter sebagai teks pendukung.
 - **Jenis font:** Sans-serif.
 - **Sumber:** Google Fonts.
 - **Font weight:** `400`, `500`, `600`, dan `700`.
