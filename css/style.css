@@ -1,6 +1,30 @@
+:root {
+  --color-primary: #1d68f5;
+  --color-primary-hover: #1554c9;
+  --color-primary-light: #eaf2ff;
+  --color-primary-border: #bdd7ff;
+  --color-primary-soft: #dbeafe;
+  --color-primary-muted: #93c5fd;
+
+  --color-text-heading: #0f172a;
+  --color-text-primary: #334155;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748b;
+  --color-text-placeholder: #94a3b8;
+
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f1f5f9;
+  --color-border: #e2e8f0;
+  --color-border-muted: #cbd5e1;
+  --color-banner-border: #d6e6fe;
+
+  --color-success: #22c55e;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f8fafc;
+  background-color: #F8FAFC;
   color: #334155;
   margin: 0;
   padding: 0;
@@ -338,7 +362,6 @@ body {
   transform: scale(1.08);
 }
 
-/* ================= 8. HALAMAN FORUM DISKUSI ================= */
 .forum-title {
   font-size: 1.55rem;
   color: #0f172a;
@@ -380,7 +403,6 @@ body {
   color: #94a3b8;
 }
 
-/* Kartu Diskusi Forum */
 .card-forum {
   border: 1.5px solid #cbd5e1 !important;
   border-radius: 16px;
@@ -441,9 +463,184 @@ body {
   opacity: 1;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.fade-in-awal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+}
+
+.fade-in-tampil {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-jenjang:active,
+.card-pertanyaan:active,
+.card-forum:active,
+.btn:active,
+.btn-ajukan-pertanyaan:active,
+.tombol-cari:active {
+  transform: scale(0.98);
+}
+
+a,
+button,
+input,
+.card-jenjang,
+.card-pertanyaan,
+.card-forum {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+.card-jenjang:focus-visible {
+  outline: 3px solid rgba(29, 104, 245, 0.25);
+  outline-offset: 2px;
+}
+
+.topbar {
+  background: #FFFFFF;
+  border-bottom-color: #E2E8F0;
+}
+
+.sidebar {
+  background: #FFFFFF;
+  border-right-color: #E2E8F0;
+}
+
+.menu-item.active {
+  background: #1D68F5;
+  box-shadow: 0 4px 10px rgba(29, 104, 245, 0.12);
+}
+
+.banner-box {
+  background: #EAF2FF;
+  border: 1px solid #BDD7FF;
+  border-radius: 12px !important;
+}
+
+.banner-heading,
+.forum-title,
+.section-title,
+.judul-tanya,
+.forum-question-title,
+.user-name {
+  color: #0F172A;
+}
+
+.banner-desc,
+.forum-question-desc {
+  color: #475569;
+}
+
+.card-jenjang {
+  min-height: 82px;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 12px;
+}
+
+.card-jenjang.active {
+  border: 2px solid #1D68F5;
+  background: #FFFFFF;
+  box-shadow: 0 6px 18px rgba(29, 104, 245, 0.08);
+}
+
+.card-pertanyaan,
+.card-forum {
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+}
+
+.card-pertanyaan {
+  padding: 18px 20px !important;
+}
+
+.card-pertanyaan:hover,
+.card-forum:hover {
+  border-color: #93C5FD;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  transform: translateY(-1px);
+}
+
+.badge-mapel,
+.badge-forum-mapel {
+  background: #EAF2FF;
+  color: #1D68F5;
+}
+
+.badge-jenjang,
+.badge-forum-jenjang {
+  background: #F1F5F9;
+  color: #64748B;
+  border: 0;
+}
+
+.avatar-user,
+.profile-circle,
+.jenjang-icon {
+  background: #EAF2FF;
+  color: #1D68F5;
+}
+
+.profile-circle {
+  border: 1.5px solid #BDD7FF;
+}
+
+.tombol-cari,
+.btn-ajukan-pertanyaan,
+.tombol-tanya-fab {
+  background: #1D68F5;
+  box-shadow: none;
+}
+
+.tombol-cari:hover,
+.btn-ajukan-pertanyaan:hover,
+.tombol-tanya-fab:hover {
+  background: #1554C9;
+}
+
+.tombol-tanya-fab {
+  box-shadow: 0 4px 15px rgba(29, 104, 245, 0.35);
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    width: 220px;
+  }
+
+  .main-content {
+    padding-inline: 24px;
+  }
+}
+
 @media (max-width: 768px) {
+  .topbar {
+    height: 64px;
+  }
+
+  .topbar-inner {
+    padding-inline: 16px !important;
+  }
+
+  .logo-box,
+  .profile-circle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .logo-text {
+    font-size: 1.1rem;
+  }
+
   .dashboard-body {
     flex-direction: column;
+    min-height: calc(100vh - 64px);
   }
 
   .sidebar {
@@ -452,15 +649,129 @@ body {
     height: auto;
     position: static;
     border-right: none;
-    border-bottom: 1px solid #e2e8f0;
-    padding: 14px 16px;
+    border-bottom: 1px solid #E2E8F0;
+    padding: 10px 12px;
+  }
+
+  .sidebar-nav .nav {
+    flex-direction: row !important;
+    gap: 6px !important;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+
+  .sidebar-nav .nav-item {
+    flex: 1 0 auto;
+  }
+
+  .menu-item {
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 12px;
+    white-space: nowrap;
+  }
+
+  .menu-item span {
+    display: none;
   }
 
   .main-content {
-    padding: 20px 16px 60px;
+    padding: 20px 16px 80px;
   }
 
-  .banner-heading {
+  .banner-heading,
+  .forum-title {
     font-size: 1.3rem;
+  }
+
+  .kartu-ilustrasi {
+    display: none;
+  }
+
+  .search-container,
+  .search-forum-inner {
+    min-height: 48px;
+  }
+
+  .tombol-cari {
+    min-height: 44px;
+  }
+
+  .card-pertanyaan {
+    padding: 16px !important;
+  }
+
+  .card-pertanyaan > .d-flex {
+    position: relative;
+  }
+
+  .card-pertanyaan .text-success {
+    margin-left: 50px;
+  }
+
+  .card-forum {
+    padding: 16px !important;
+  }
+
+  .card-forum > .d-flex:first-child {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .card-forum > .d-flex:first-child > .d-flex:last-child {
+    margin-left: 50px;
+  }
+
+  .btn-ajukan-pertanyaan {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+  }
+
+  .tombol-tanya-fab {
+    width: 52px;
+    height: 52px;
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-icon-btn {
+    display: none;
+  }
+
+  .sidebar-nav .nav-item {
+    flex: 0 0 44px;
+  }
+
+  .menu-item {
+    width: 44px;
+  }
+
+  .banner-box {
+    padding: 20px !important;
+  }
+
+  .search-container {
+    padding: 4px !important;
+  }
+
+  .tombol-silang {
+    display: none;
+  }
+
+  .tombol-cari {
+    padding-inline: 16px !important;
+  }
+
+  .card-pertanyaan .d-flex.flex-wrap {
+    gap: 6px !important;
+  }
+
+  .card-pertanyaan .avatar-user {
+    width: 36px;
+    height: 36px;
   }
 }

@@ -34,6 +34,7 @@ Proyek ini dikembangkan sebagai tugas mata kuliah Desain Web Semester 3.
 - **CSS3** untuk layout, komponen, warna, dan responsivitas.
 - **Bootstrap 5.3.2** untuk grid dan utilitas antarmuka.
 - **Bootstrap Icons 1.11.3** untuk ikon.
+- **JavaScript (Vanilla JS)** sederhana untuk animasi halus (fade-in konten, transisi jenjang, dan smooth scroll).
 - **Google Fonts:** Poppins sebagai primary font dan Inter sebagai secondary font.
 - Tanpa backend dan database; data pada prototipe bersifat statis.
 
@@ -78,6 +79,8 @@ EduConnect/
 │   └── DESIGN.md
 ├── css/
 │   └── style.css
+├── js/
+│   └── script.js
 ├── img/
 ├── .vscode/
 │   └── settings.json
@@ -89,6 +92,7 @@ EduConnect/
 - `index.html`: halaman beranda/dashboard.
 - `forum.html`: halaman forum diskusi.
 - `css/style.css`: stylesheet utama dan gaya responsif.
+- `js/script.js`: script animasi halus dan interaksi sederhana.
 - `img/`: aset gambar project.
 - `docs/PRD.md`: rancangan kebutuhan, alur pengguna, ruang lingkup, dan kriteria penerimaan.
 - `docs/DESIGN.md`: sitemap, pedoman visual, komponen, responsivitas, dan spesifikasi desain.
