@@ -77,26 +77,6 @@ Seluruh dokumen perancangan yang digunakan pada tahap awal telah dimasukkan ke r
 4. **Panduan Desain dan Spesifikasi Antarmuka**  
    [Buka design.md](docs/DESIGN.md)
 
-## Cara Menjalankan Project
-
-Project dapat dijalankan secara lokal tanpa proses build atau instalasi package.
-
-1. Clone repository:
-
-```bash
-git clone https://github.com/naurafatimahh/EduConnect.git
-```
-
-2. Masuk ke folder project:
-
-```bash
-cd EduConnect
-```
-
-3. Buka `index.html` menggunakan browser, atau jalankan melalui Live Server pada VS Code.
-
-4. Gunakan tautan **Forum** pada sidebar untuk membuka `forum.html`.
-
 ## Status Implementasi
 
 Saat ini implementasi mencakup tampilan front-end prototipe:
