@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduConnect - Forum Diskusi</title>
+
+  <!-- Google Font: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- File CSS Kustom -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= 1. NAVBAR ATAS (TERHUBUNG & SEWARNA DENGAN SIDEBAR) ================= -->
+  <header class="topbar sticky-top">
+    <div class="topbar-inner d-flex align-items-center justify-content-between px-4">
+      
+      <!-- Kiri: Logo EduConnect (sejajar di atas sidebar) -->
+      <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none logo-link">
+        <div class="logo-box">
+          <i class="bi bi-mortarboard-fill text-white"></i>
+        </div>
+        <span class="logo-text">EduConnect</span>
+      </a>
+
+      <!-- Kanan: Kotak Ikon Notifikasi & Profil -->
+      <div class="d-flex align-items-center gap-3">
+        <a href="#" class="nav-icon-btn" title="Notifikasi">
+          <i class="bi bi-bell"></i>
+        </a>
+        <a href="#" class="profile-circle" title="Profil Saya">
+          <i class="bi bi-person"></i>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= 2. BODY LAYOUT (SIDEBAR & KONTEN UTAMA) ================= -->
+  <div class="dashboard-body">
+
+    <!-- ================= SIDEBAR KIRI ================= -->
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <ul class="nav flex-column gap-2">
+          
+          <!-- Menu Beranda -->
+          <li class="nav-item">
+            <a class="nav-link menu-item" href="index.html">
+              <i class="bi bi-house-door"></i>
+              <span>Beranda</span>
+            </a>
+          </li>
+
+          <!-- Menu Materi & Pertanyaan -->
+          <li class="nav-item">
+            <a class="nav-link menu-item" href="#">
+              <i class="bi bi-book"></i>
+              <span>Materi & Pertanyaan</span>
+            </a>
+          </li>
+
+          <!-- Menu Forum (AKTIF) -->
+          <li class="nav-item">
+            <a class="nav-link menu-item active" href="forum.html">
+              <i class="bi bi-chat-left-text-fill"></i>
+              <span>Forum</span>
+            </a>
+          </li>
+
+          <!-- Menu Profil -->
+          <li class="nav-item">
+            <a class="nav-link menu-item" href="#">
+              <i class="bi bi-person"></i>
+              <span>Profil</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ================= KONTEN UTAMA FORUM ================= -->
+    <main class="main-content">
+      <div class="content-container">
+
+        <!-- HEADER FORUM: Judul & Tombol Ajukan Pertanyaan -->
+        <div class="d-flex justify-content-between align-items-center mb-4 pt-1">
+          <h2 class="fw-bold mb-0 forum-title">Forum Diskusi</h2>
+          <a href="#" class="btn btn-primary fw-semibold btn-ajukan-pertanyaan">
+            <i class="bi bi-plus-lg me-1"></i> Ajukan Pertanyaan
+          </a>
+        </div>
+
+        <!-- SEARCH BAR FORUM -->
+        <div class="search-forum-box mb-4">
+          <div class="d-flex align-items-center bg-white rounded-3 px-3 py-2 border search-forum-inner">
+            <i class="bi bi-search text-muted me-2 fs-6"></i>
+            <input type="text" class="form-control border-0 shadow-none p-0 input-forum-search" placeholder="Cari materi atau pertanyaan..">
+          </div>
+        </div>
+
+        <!-- DAFTAR KARTU DISKUSI FORUM -->
+        <div class="forum-feed d-flex flex-column gap-3">
+
+          <!-- Kartu Diskusi 1 -->
+          <article class="card-forum bg-white rounded-4 border p-4">
+            <!-- Header Kartu: User & Tag -->
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div class="d-flex align-items-center gap-3">
+                <div class="avatar-user flex-shrink-0">NP</div>
+                <div>
+                  <h6 class="fw-bold mb-0 text-dark user-name">Naura Patimah</h6>
+                  <small class="text-muted user-sub">SMA · 5 menit lalu</small>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <span class="badge-forum-mapel">Matematika</span>
+                <span class="badge-forum-jenjang">SMA/SMK</span>
+              </div>
+            </div>
+
+            <!-- Isi Diskusi: Judul & Pertanyaan -->
+            <h6 class="fw-bold text-dark forum-question-title mb-2">
+              Menurut kalian, belajar matematika seru apa tidak?
+            </h6>
+            <p class="forum-question-desc text-muted mb-3">
+              Aku pribadi lebih mudah memahami materi kalau melihat penjelasan melalui video. Tapi terkadang buku lebih membantu saat mengerjakan latihan soal. Kalau kalian lebih suka metode belajar yang mana?
+            </p>
+
+            <!-- Garis Pemisah Tipis -->
+            <hr class="forum-divider my-2">
+
+            <!-- Footer Kartu: Jumlah Jawaban -->
+            <div class="d-flex justify-content-end align-items-center pt-2">
+              <span class="text-success fw-semibold small d-flex align-items-center gap-1">
+                <i class="bi bi-check-circle"></i>
+                <span class="text-dark">2 Jawaban</span>
+              </span>
+            </div>
+          </article>
+
+          <!-- Kartu Diskusi 2 -->
+          <article class="card-forum bg-white rounded-4 border p-4">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div class="d-flex align-items-center gap-3">
+                <div class="avatar-user flex-shrink-0">NP</div>
+                <div>
+                  <h6 class="fw-bold mb-0 text-dark user-name">Naura Patimah</h6>
+                  <small class="text-muted user-sub">SMA · 5 menit lalu</small>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <span class="badge-forum-mapel">Matematika</span>
+                <span class="badge-forum-jenjang">SMA/SMK</span>
+              </div>
+            </div>
+
+            <h6 class="fw-bold text-dark forum-question-title mb-2">
+              Menurut kalian, belajar matematika seru apa tidak?
+            </h6>
+            <p class="forum-question-desc text-muted mb-3">
+              Aku pribadi lebih mudah memahami materi kalau melihat penjelasan melalui video. Tapi terkadang buku lebih membantu saat mengerjakan latihan soal. Kalau kalian lebih suka metode belajar yang mana?
+            </p>
+
+            <hr class="forum-divider my-2">
+
+            <div class="d-flex justify-content-end align-items-center pt-2">
+              <span class="text-success fw-semibold small d-flex align-items-center gap-1">
+                <i class="bi bi-check-circle"></i>
+                <span class="text-dark">2 Jawaban</span>
+              </span>
+            </div>
+          </article>
+
+          <!-- Kartu Diskusi 3 -->
+          <article class="card-forum bg-white rounded-4 border p-4">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div class="d-flex align-items-center gap-3">
+                <div class="avatar-user flex-shrink-0">NP</div>
+                <div>
+                  <h6 class="fw-bold mb-0 text-dark user-name">Naura Patimah</h6>
+                  <small class="text-muted user-sub">SMA · 5 menit lalu</small>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <span class="badge-forum-mapel">Matematika</span>
+                <span class="badge-forum-jenjang">SMA/SMK</span>
+              </div>
+            </div>
+
+            <h6 class="fw-bold text-dark forum-question-title mb-2">
+              Menurut kalian, belajar matematika seru apa tidak?
+            </h6>
+            <p class="forum-question-desc text-muted mb-3">
+              Aku pribadi lebih mudah memahami materi kalau melihat penjelasan melalui video. Tapi terkadang buku lebih membantu saat mengerjakan latihan soal. Kalau kalian lebih suka metode belajar yang mana?
+            </p>
+
+            <hr class="forum-divider my-2">
+
+            <div class="d-flex justify-content-end align-items-center pt-2">
+              <span class="text-success fw-semibold small d-flex align-items-center gap-1">
+                <i class="bi bi-check-circle"></i>
+                <span class="text-dark">2 Jawaban</span>
+              </span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+</body>
+</html>
