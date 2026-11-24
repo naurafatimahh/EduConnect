@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduConnect - Detail Pertanyaan</title>
+
+  <!-- Google Fonts (Poppins & Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= TOPBAR ================= -->
+  <header class="topbar sticky-top">
+    <div class="topbar-inner d-flex align-items-center justify-content-between px-4">
+      
+      <!-- Logo EduConnect -->
+      <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none logo-link">
+        <div class="logo-box">
+          <i class="bi bi-mortarboard-fill text-white"></i>
+        </div>
+        <span class="logo-text">EduConnect</span>
+      </a>
+
+      <!-- Quick Search Bar (Header) -->
+      <div class="d-none d-md-flex align-items-center bg-light border rounded-pill px-3 py-1" style="width: 320px;">
+        <i class="bi bi-search text-muted me-2"></i>
+        <input type="text" class="form-control form-control-sm border-0 bg-transparent shadow-none" placeholder="Cari materi atau pertanyaan...">
+      </div>
+
+      <!-- User Action Icons -->
+      <div class="d-flex align-items-center gap-3">
+        <a href="#" class="nav-icon-btn position-relative" title="Notifikasi">
+          <i class="bi bi-bell"></i>
+          <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+            <span class="visually-hidden">Notifikasi baru</span>
+          </span>
+        </a>
+        <a href="#" class="profile-circle" title="Profil Saya">
+          <i class="bi bi-person"></i>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= DASHBOARD LAYOUT ================= -->
+  <div class="dashboard-body">
+
+    <!-- ================= SIDEBAR NAV ================= -->
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <ul class="nav flex-column gap-2">
+          
+          <li class="nav-item">
+            <a class="nav-link menu-item" href="index.html">
+              <i class="bi bi-house-door"></i>
+              <span>Beranda</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link menu-item active" href="question-detail.html">
+              <i class="bi bi-book-half"></i>
+              <span>Materi & Pertanyaan</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link menu-item" href="#">
+              <i class="bi bi-chat-left-text"></i>
+              <span>Forum</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link menu-item" href="#">
+              <i class="bi bi-person"></i>
+              <span>Profil</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="main-content">
+      <div class="content-container">
+
+        <!-- Navigasi Breadcrumbs & Tombol Kembali -->
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-custom mb-0">
+              <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
+              <li class="breadcrumb-item"><a href="#">SMA/SMK</a></li>
+              <li class="breadcrumb-item"><a href="#">Matematika</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Detail Pertanyaan</li>
+            </ol>
+          </nav>
+
+          <a href="index.html" class="btn-back">
+            <i class="bi bi-arrow-left"></i>
+            <span>Kembali ke Beranda</span>
+          </a>
+        </div>
+
+        <!-- Layout Grid Utama (Konten Pertanyaan & Sidebar Informasi) -->
+        <div class="row g-4">
+
+          <!-- KOLOM KIRI (KONTEN UTAMA: DETAIL PERTANYAAN, JAWABAN, FORM) -->
+          <div class="col-12 col-lg-8">
+
+            <!-- 1. KARTU DETAIL PERTANYAAN -->
+            <article class="card-detail-pertanyaan mb-4">
+              
+              <!-- Meta Penanya & Kategori -->
+              <div class="d-flex align-items-start justify-content-between flex-wrap gap-2 mb-3">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="detail-user-avatar">
+                    AD
+                  </div>
+                  <div>
+                    <div class="d-flex align-items-center gap-2">
+                      <h6 class="fw-bold mb-0 text-dark">Ahmad Dani</h6>
+                      <span class="badge bg-secondary-subtle text-secondary small py-0 px-2">Penanya</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 small text-muted">
+                      <span>Siswa SMA Kelas 11</span>
+                      <span>•</span>
+                      <span>2 jam yang lalu</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Badges Mapel & Jenjang -->
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <span class="badge-mapel">Matematika</span>
+                  <span class="badge-jenjang">SMA/SMK</span>
+                  <span class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1 small fw-semibold">
+                    <i class="bi bi-check-circle-fill me-1"></i>Terjawab
+                  </span>
+                </div>
+              </div>
+
+              <!-- Judul Pertanyaan -->
+              <h1 class="pertanyaan-title">
+                Bagaimana cara menyelesaikan persamaan kuadrat dengan rumus abc?
+              </h1>
+
+              <!-- Isi Deskripsi Pertanyaan -->
+              <div class="pertanyaan-body">
+                <p>
+                  Halo teman-teman dan tutor di EduConnect, saya sedang mempelajari bab <strong>Persamaan dan Fungsi Kuadrat</strong> di kelas 11 SMA. Saya masih sering ragu saat menentukan nilai diskriminan dan memasukkannya ke dalam rumus abc kuadratik.
+                </p>
+                <p>
+                  Berikut adalah contoh persamaan kuadrat yang sedang saya selesaikan:
+                </p>
+
+                <!-- Box Rumus Soal -->
+                <div class="formula-highlight-box">
+                  <div class="text-muted small fw-medium mb-1">Contoh Soal:</div>
+                  <div class="formula-display">2x² + 5x - 3 = 0</div>
+                </div>
+
+                <p>Pertanyaan yang ingin saya tanyakan:</p>
+                <ol class="ps-3 mb-3">
+                  <li class="mb-1">Bagaimana langkah sistematis menentukan nilai <em>a</em>, <em>b</em>, dan <em>c</em> serta menghitung nilai diskriminannya?</li>
+                  <li class="mb-1">Bagaimana cara memasukkan nilai tersebut ke dalam rumus abc sampai mendapatkan akar-akar <em>x₁</em> dan <em>x₂</em>?</li>
+                  <li>Kapan sebaiknya kita memilih memakai rumus abc daripada metode pemfaktoran biasa?</li>
+                </ol>
+                <p class="mb-0">
+                  Mohon bantuannya dengan penjelasan langkah demi langkah yang runtut agar mudah dipahami. Terima kasih banyak sebelumnya!
+                </p>
+              </div>
+
+              <!-- Tombol Aksi Pertanyaan (Like, Simpan, Share) -->
+              <div class="pertanyaan-actions">
+                <button class="btn-action" id="btnLikePertanyaan">
+                  <i class="bi bi-arrow-up-circle"></i>
+                  <span>Suka (<span class="like-count">18</span>)</span>
+                </button>
+
+                <button class="btn-action" id="btnBookmarkPertanyaan">
+                  <i class="bi bi-bookmark"></i>
+                  <span class="btn-text">Simpan</span>
+                </button>
+
+                <button class="btn-action" id="btnSharePertanyaan">
+                  <i class="bi bi-share"></i>
+                  <span>Bagikan</span>
+                </button>
+
+                <div class="ms-auto text-muted small d-flex align-items-center gap-1">
+                  <i class="bi bi-eye"></i>
+                  <span>Dilihat 156 kali</span>
+                </div>
+              </div>
+
+            </article>
+
+            <!-- 2. SECTION DAFTAR JAWABAN -->
+            <section class="section-jawaban">
+              
+              <!-- Header Jawaban & Filter -->
+              <div class="answers-header">
+                <div class="d-flex align-items-center gap-2">
+                  <h5 class="fw-bold mb-0 text-dark">
+                    <i class="bi bi-chat-square-text-fill text-primary me-2"></i>
+                    <span id="totalJawabanCount">3</span> Jawaban
+                  </h5>
+                </div>
+
+                <div class="btn-group btn-group-sm" role="group" aria-label="Filter Jawaban">
+                  <button type="button" class="btn btn-outline-primary active btn-filter-jawaban" data-sort="terbaik">
+                    <i class="bi bi-award me-1"></i>Terbaik
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary btn-filter-jawaban" data-sort="terbaru">
+                    <i class="bi bi-clock me-1"></i>Terbaru
+                  </button>
+                </div>
+              </div>
+
+              <!-- Container List Jawaban -->
+              <div id="daftarJawaban" class="d-flex flex-column gap-4">
+
+                <!-- JAWABAN 1: PENANDA JAWABAN TERBAIK (FR-09) -->
+                <div class="card-jawaban card-jawaban-terbaik">
+                  
+                  <!-- Banner Jawaban Terbaik -->
+                  <div class="badge-terbaik-banner">
+                    <i class="bi bi-patch-check-fill"></i>
+                    <span>Jawaban Terbaik • Dipilih oleh Penanya</span>
+                  </div>
+
+                  <!-- Profil Penjawab -->
+                  <div class="d-flex align-items-start gap-3 mb-3">
+                    <div class="detail-user-avatar user-green">
+                      SN
+                    </div>
+                    <div class="flex-grow-1">
+                      <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                        <div>
+                          <div class="d-flex align-items-center gap-2">
+                            <h6 class="fw-bold mb-0 text-dark">Siti Nurhaliza</h6>
+                            <span class="badge bg-success-subtle text-success border border-success-subtle px-2 py-0 small">
+                              <i class="bi bi-star-fill me-1"></i>Top Kontributor
+                            </span>
+                          </div>
+                          <div class="d-flex align-items-center gap-2 small text-muted">
+                            <span>Siswa SMA Kelas 12</span>
+                            <span>•</span>
+                            <span>1 jam yang lalu</span>
+                          </div>
+                        </div>
+                        <span class="badge bg-light text-muted border px-2 py-1 small">
+                          <i class="bi bi-shield-check text-success me-1"></i>Terverifikasi
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Isi Jawaban Terbaik -->
+                  <div class="pertanyaan-body ps-md-5 ms-md-2 mb-3">
+                    <p>
+                      Halo Ahmad! Rumus <strong>abc</strong> (rumus kuadrat) adalah metode pasti yang selalu berhasil menyelesaikan semua jenis persamaan kuadrat bentuk <code>ax² + bx + c = 0</code>.
+                    </p>
+
+                    <div class="formula-highlight-box border-success-subtle bg-white">
+                      <div class="text-muted small fw-medium mb-1">Rumus Kuadratik (abc):</div>
+                      <div class="formula-display text-success">
+                        x₁,₂ = [-b ± √(b² - 4ac)] / (2a)
+                      </div>
+                    </div>
+
+                    <p>Berikut adalah penyelesaian langkah demi langkah untuk persamaan <strong>2x² + 5x - 3 = 0</strong>:</p>
+
+                    <!-- Langkah 1 -->
+                    <div class="step-card">
+                      <div class="step-title">
+                        <span class="step-number step-green">1</span>
+                        <span>Identifikasi Nilai Koefisien a, b, dan c</span>
+                      </div>
+                      <p class="mb-0 small text-secondary">
+                        Dari bentuk <code>ax² + bx + c = 0</code>, diperoleh:<br>
+                        • <strong>a = 2</strong> (koefisien x²)<br>
+                        • <strong>b = 5</strong> (koefisien x)<br>
+                        • <strong>c = -3</strong> (konstanta)
+                      </p>
+                    </div>
+
+                    <!-- Langkah 2 -->
+                    <div class="step-card">
+                      <div class="step-title">
+                        <span class="step-number step-green">2</span>
+                        <span>Hitung Nilai Diskriminan (D = b² - 4ac)</span>
+                      </div>
+                      <p class="mb-0 small text-secondary">
+                        D = 5² - 4(2)(-3)<br>
+                        D = 25 - (-24)<br>
+                        D = 25 + 24 = <strong>49</strong><br>
+                        <em>Catatan: Karena D = 49 (D &gt; 0 dan kuadrat sempurna), persamaan memiliki 2 akar riil yang berbeda dan rasional.</em>
+                      </p>
+                    </div>
+
+                    <!-- Langkah 3 -->
+                    <div class="step-card">
+                      <div class="step-title">
+                        <span class="step-number step-green">3</span>
+                        <span>Substitusi Nilai ke Rumus abc</span>
+                      </div>
+                      <p class="mb-0 small text-secondary">
+                        x = [-5 ± √49] / [2(2)]<br>
+                        x = [-5 ± 7] / 4
+                      </p>
+                    </div>
+
+                    <!-- Langkah 4 -->
+                    <div class="step-card">
+                      <div class="step-title">
+                        <span class="step-number step-green">4</span>
+                        <span>Hitung Akar x₁ dan x₂</span>
+                      </div>
+                      <p class="mb-0 small text-secondary">
+                        • Untuk (+) : <strong>x₁ = (-5 + 7) / 4 = 2 / 4 = 1/2</strong><br>
+                        • Untuk (-) : <strong>x₂ = (-5 - 7) / 4 = -12 / 4 = -3</strong><br>
+                        Maka Himpunan Penyelesaiannya: <strong>HP = {-3, 1/2}</strong>
+                      </p>
+                    </div>
+
+                    <div class="p-3 bg-light rounded-3 mt-3">
+                      <h6 class="fw-bold mb-1 small text-dark"><i class="bi bi-lightbulb-fill text-warning me-1"></i> Tips Kapan Menggunakan Rumus abc:</h6>
+                      <p class="small text-muted mb-0">
+                        Gunakan rumus abc jika koefisien angka sulit difaktorkan secara langsung atau jika akarnya berupa bilangan pecahan/bentuk akar (irasional). Jika mudah difaktorkan, metode pemfaktoran tetap lebih cepat.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Interaksi Jawaban -->
+                  <div class="d-flex align-items-center justify-content-between pt-3 border-top ps-md-5 ms-md-2">
+                    <button class="btn-action btn-vote-jawaban" data-count="24" data-voted="false">
+                      <i class="bi bi-hand-thumbs-up"></i>
+                      <span class="vote-label">Membantu (24)</span>
+                    </button>
+                    <span class="small text-muted">2 komentar</span>
+                  </div>
+
+                </div>
+
+                <!-- JAWABAN 2: JAWABAN LAIN -->
+                <div class="card-jawaban">
+                  
+                  <div class="d-flex align-items-start gap-3 mb-3">
+                    <div class="detail-user-avatar user-amber">
+                      RP
+                    </div>
+                    <div class="flex-grow-1">
+                      <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                        <div>
+                          <h6 class="fw-bold mb-0 text-dark">Rian Pratama</h6>
+                          <div class="d-flex align-items-center gap-2 small text-muted">
+                            <span>Siswa SMA Kelas 11</span>
+                            <span>•</span>
+                            <span>50 menit lalu</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="pertanyaan-body ps-md-5 ms-md-2 mb-3">
+                    <p>
+                      Penjelasan kak Siti sudah sangat lengkap! Saya ingin menambahkan sedikit tips untuk <strong>memverifikasi jawaban</strong> saat ulangan.
+                    </p>
+                    <p>
+                      Setelah kamu mendapatkan <code>x₁ = 1/2</code> dan <code>x₂ = -3</code>, kamu bisa mengeceknya dengan memasukkan kembali ke persamaan awal:
+                    </p>
+                    <div class="bg-light p-3 rounded-3 small font-monospace mb-2">
+                      2(-3)² + 5(-3) - 3 = 2(9) - 15 - 3 = 18 - 18 = 0 (Terbukti benar!)
+                    </div>
+                    <p class="mb-0">
+                      Bisa juga dengan bentuk faktor <code>(2x - 1)(x + 3) = 0</code>. Semoga membantu ya Ahmad!
+                    </p>
+                  </div>
+
+                  <div class="d-flex align-items-center justify-content-between pt-3 border-top ps-md-5 ms-md-2">
+                    <button class="btn-action btn-vote-jawaban" data-count="8" data-voted="false">
+                      <i class="bi bi-hand-thumbs-up"></i>
+                      <span class="vote-label">Membantu (8)</span>
+                    </button>
+                    <span class="small text-muted">Belum ada komentar</span>
+                  </div>
+
+                </div>
+
+                <!-- JAWABAN 3: JAWABAN LAIN -->
+                <div class="card-jawaban">
+                  
+                  <div class="d-flex align-items-start gap-3 mb-3">
+                    <div class="detail-user-avatar user-purple">
+                      DL
+                    </div>
+                    <div class="flex-grow-1">
+                      <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                        <div>
+                          <h6 class="fw-bold mb-0 text-dark">Dewi Lestari</h6>
+                          <div class="d-flex align-items-center gap-2 small text-muted">
+                            <span>Siswa SMA Kelas 10</span>
+                            <span>•</span>
+                            <span>30 menit lalu</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="pertanyaan-body ps-md-5 ms-md-2 mb-3">
+                    <p>
+                      Menambahkan informasi mengenai nilai <strong>Diskriminan (D)</strong> yang sangat sering keluar di soal ujian:
+                    </p>
+                    <ul class="small text-secondary ps-3 mb-2">
+                      <li><strong>D &gt; 0:</strong> Memiliki dua akar riil yang berlainan (seperti soal ini di mana D = 49).</li>
+                      <li><strong>D = 0:</strong> Memiliki dua akar kembar (akar riil yang sama).</li>
+                      <li><strong>D &lt; 0:</strong> Tidak memiliki akar riil (akarnya imajiner).</li>
+                    </ul>
+                    <p class="mb-0">
+                      Semangat belajarnya Ahmad, persamaan kuadrat ini adalah fondasi penting untuk materi kalkulus nanti!
+                    </p>
+                  </div>
+
+                  <div class="d-flex align-items-center justify-content-between pt-3 border-top ps-md-5 ms-md-2">
+                    <button class="btn-action btn-vote-jawaban" data-count="5" data-voted="false">
+                      <i class="bi bi-hand-thumbs-up"></i>
+                      <span class="vote-label">Membantu (5)</span>
+                    </button>
+                    <span class="small text-muted">Belum ada komentar</span>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </section>
+
+            <!-- 3. FORMULIR MEMBERIKAN JAWABAN (FR-06, PRD 5.4) -->
+            <section class="card-form-jawaban">
+              
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <h5 class="fw-bold mb-0 text-dark">
+                  <i class="bi bi-pencil-square text-primary me-2"></i>
+                  Bantu Teman Menjawab
+                </h5>
+                <span class="small text-muted">Bagikan pemahamanmu</span>
+              </div>
+
+              <!-- Profil Pengguna yang Sedang Menjawab -->
+              <div class="d-flex align-items-center gap-2 mb-3 p-2 bg-light rounded-3">
+                <div class="detail-user-avatar user-blue-light" style="width: 34px; height: 34px; font-size: 0.85rem;">
+                  <i class="bi bi-person-fill"></i>
+                </div>
+                <div class="small">
+                  Menjawab sebagai <strong class="text-dark">Budi Santoso (Anda)</strong> • Siswa SMA
+                </div>
+              </div>
+
+              <!-- Form Input Jawaban -->
+              <form id="formKirimJawaban">
+                
+                <!-- Toolbar Format Text -->
+                <div class="editor-toolbar">
+                  <button type="button" class="btn-tool" data-tool="bold" title="Tebal (Bold)">
+                    <i class="bi bi-type-bold"></i>
+                  </button>
+                  <button type="button" class="btn-tool" data-tool="italic" title="Miring (Italic)">
+                    <i class="bi bi-type-italic"></i>
+                  </button>
+                  <button type="button" class="btn-tool" data-tool="list" title="Daftar Langkah (List)">
+                    <i class="bi bi-list-ol"></i>
+                  </button>
+                  <button type="button" class="btn-tool" data-tool="formula" title="Sisipkan Rumus Matematika">
+                    <i class="bi bi-calculator"></i>
+                  </button>
+                  <button type="button" class="btn-tool" data-tool="code" title="Sisipkan Kode/Notasi">
+                    <i class="bi bi-code-slash"></i>
+                  </button>
+                  <span class="text-muted ms-auto small d-none d-sm-inline">
+                    <i class="bi bi-markdown me-1"></i>Format teks didukung
+                  </span>
+                </div>
+
+                <!-- Textarea Jawaban -->
+                <div class="mb-3">
+                  <textarea 
+                    id="inputJawaban" 
+                    class="form-control editor-textarea" 
+                    rows="5" 
+                    placeholder="Tulis jawabanmu dengan lengkap, sertakan rumus atau langkah-langkah penyelesaian agar temanmu mudah memahami..."
+                    required></textarea>
+                  <div class="invalid-feedback">
+                    Jawaban tidak boleh kosong. Silakan tuliskan penjelasanmu.
+                  </div>
+                </div>
+
+                <!-- Petunjuk & Tombol Submit -->
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+                  <div class="small text-muted">
+                    <i class="bi bi-info-circle me-1"></i>
+                    Pastikan jawaban sopan, jelas, dan mematuhi pedoman komunitas EduConnect.
+                  </div>
+
+                  <button type="submit" class="btn btn-primary px-4 fw-semibold tombol-cari d-flex align-items-center gap-2">
+                    <i class="bi bi-send-fill"></i>
+                    <span>Kirim Jawaban</span>
+                  </button>
+                </div>
+
+              </form>
+
+            </section>
+
+          </div>
+
+          <!-- KOLOM KANAN (SIDEBAR WIDGET: STATISTIK, TERKAIT, PANDUAN) -->
+          <div class="col-12 col-lg-4 sidebar-widget-col">
+
+            <!-- WIDGET 1: INFORMASI PERTANYAAN -->
+            <div class="sidebar-widget">
+              <h6 class="widget-title">
+                <i class="bi bi-info-circle text-primary"></i>
+                <span>Informasi Pertanyaan</span>
+              </h6>
+
+              <div class="widget-stat-item">
+                <span class="text-muted">Status:</span>
+                <span class="badge bg-success-subtle text-success border border-success-subtle fw-semibold">
+                  <i class="bi bi-check-circle-fill me-1"></i>Terjawab
+                </span>
+              </div>
+
+              <div class="widget-stat-item">
+                <span class="text-muted">Jenjang:</span>
+                <span class="fw-semibold text-dark">SMA / SMK</span>
+              </div>
+
+              <div class="widget-stat-item">
+                <span class="text-muted">Mata Pelajaran:</span>
+                <span class="fw-semibold text-primary">Matematika</span>
+              </div>
+
+              <div class="widget-stat-item">
+                <span class="text-muted">Total Jawaban:</span>
+                <span class="fw-semibold text-dark">3 Jawaban</span>
+              </div>
+
+              <div class="widget-stat-item">
+                <span class="text-muted">Dilihat:</span>
+                <span class="fw-semibold text-dark">156 kali</span>
+              </div>
+
+              <div class="widget-stat-item">
+                <span class="text-muted">Aktivitas Terakhir:</span>
+                <span class="text-muted">30 menit lalu</span>
+              </div>
+            </div>
+
+            <!-- WIDGET 2: PERTANYAAN TERKAIT -->
+            <div class="sidebar-widget">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <h6 class="widget-title mb-0">
+                  <i class="bi bi-link-45deg text-primary"></i>
+                  <span>Pertanyaan Terkait</span>
+                </h6>
+                <a href="#" class="small text-primary text-decoration-none">Lihat Semua</a>
+              </div>
+
+              <div class="d-flex flex-column">
+                
+                <a href="#" class="terkait-item">
+                  <div class="terkait-title">
+                    Bagaimana cara menentukan titik puncak parabola pada fungsi kuadrat?
+                  </div>
+                  <div class="terkait-meta">
+                    <span class="badge-mapel py-0 px-1">Matematika</span>
+                    <span>•</span>
+                    <span class="text-success"><i class="bi bi-check me-1"></i>4 Jawaban</span>
+                  </div>
+                </a>
+
+                <a href="#" class="terkait-item">
+                  <div class="terkait-title">
+                    Apa perbedaan metode melengkapkan kuadrat sempurna dengan rumus abc?
+                  </div>
+                  <div class="terkait-meta">
+                    <span class="badge-mapel py-0 px-1">Matematika</span>
+                    <span>•</span>
+                    <span class="text-success"><i class="bi bi-check me-1"></i>2 Jawaban</span>
+                  </div>
+                </a>
+
+                <a href="#" class="terkait-item">
+                  <div class="terkait-title">
+                    Contoh soal penerapan persamaan kuadrat dalam kehidupan sehari-hari
+                  </div>
+                  <div class="terkait-meta">
+                    <span class="badge-mapel py-0 px-1">Matematika</span>
+                    <span>•</span>
+                    <span class="text-success"><i class="bi bi-check me-1"></i>5 Jawaban</span>
+                  </div>
+                </a>
+
+                <a href="#" class="terkait-item">
+                  <div class="terkait-title">
+                    Bagaimana jika nilai diskriminan negatif (D &lt; 0)?
+                  </div>
+                  <div class="terkait-meta">
+                    <span class="badge-mapel py-0 px-1">Matematika</span>
+                    <span>•</span>
+                    <span class="text-success"><i class="bi bi-check me-1"></i>3 Jawaban</span>
+                  </div>
+                </a>
+
+              </div>
+            </div>
+
+            <!-- WIDGET 3: PANDUAN MENJAWAB EDUCONNECT -->
+            <div class="sidebar-widget bg-light border-0">
+              <h6 class="widget-title text-dark">
+                <i class="bi bi-shield-check text-success"></i>
+                <span>Panduan Menjawab</span>
+              </h6>
+              
+              <ul class="small text-secondary ps-3 mb-0 d-flex flex-column gap-2">
+                <li>
+                  <strong>Berikan langkah jelas:</strong> Jelaskan proses penurunan rumus atau cara berpikir, bukan hanya hasil akhir.
+                </li>
+                <li>
+                  <strong>Gunakan bahasa santun:</strong> Hormati sesama rekan pelajar di EduConnect.
+                </li>
+                <li>
+                  <strong>Dilarang plagiasi:</strong> Cantumkan sumber jika mengutip penjelasan dari buku atau modul sekolah.
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Floating Action Button (Ajukan Pertanyaan Baru) -->
+  <a href="#" class="tombol-tanya-fab" title="Tanya Sekarang">
+    <i class="bi bi-pencil-fill"></i>
+  </a>
+
+  <!-- Toast Notification Container -->
+  <div id="eduToast" class="toast-notif" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom Detail Pertanyaan Script -->
+  <script src="js/question-detail.js"></script>
+
+</body>
+</html>
