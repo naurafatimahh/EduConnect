@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Materi | EduConnect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/materi.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="EduConnect Beranda">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 9 9-5 9 5-9 5-9-5Z"/><path d="M7 11.2v4.3c2.8 2.1 7.2 2.1 10 0v-4.3M21 9v6"/></svg>
+        </span>
+        <span class="brand-name">EduConnect</span>
+      </a>
+      <div class="topbar-actions">
+        <button class="top-icon" type="button" aria-label="Notifikasi">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4"/><path d="M10 3.5a2 2 0 0 1 4 0"/></svg>
+        </button>
+        <a class="top-icon profile-top" href="profile.html" aria-label="Profil">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="9" r="3.1"/><path d="M5.8 19c.8-3 3.1-4.5 6.2-4.5s5.4 1.5 6.2 4.5"/></svg>
+        </a>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <nav class="side-nav" aria-label="Navigasi utama">
+        <a class="nav-link" href="index.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg>
+          <span>Beranda</span>
+        </a>
+        <a class="nav-link active" href="materi.html" aria-current="page">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5c3.2-1.6 6.2-1.5 9 0v15c-2.8-1.5-5.8-1.6-9 0v-15ZM21 5.5c-3.2-1.6-6.2-1.5-9 0v15c2.8-1.5 5.8-1.6 9 0v-15Z"/></svg>
+          <span>Materi</span>
+        </a>
+        <a class="nav-link" href="forum.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7l-5 4v-4H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg>
+          <span>Forum</span>
+        </a>
+        <a class="nav-link" href="profile.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 20v-1.5A4.5 4.5 0 0 1 8.5 14h7a4.5 4.5 0 0 1 4.5 4.5V20H4Z"/></svg>
+          <span>Profil</span>
+        </a>
+      </nav>
+    </aside>
+
+    <main class="main-content list-main">
+      <h1 class="page-title">Materi</h1>
+
+      <section class="filter-row" aria-label="Pencarian dan filter materi">
+        <label class="search-box">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="7.5"/><path d="m16.5 16.5 5 5"/></svg>
+          <input id="searchInput" type="search" placeholder="Cari Judul Pertanyaan atau topik..." aria-label="Cari judul atau topik" />
+        </label>
+
+        <div class="dropdown-wrap" data-dropdown>
+          <button class="filter-button level-button" type="button" aria-expanded="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 8 10-5 10 5-10 5L2 8Z"/><path d="M6 10.2v5.1c3.7 2.5 8.3 2.5 12 0v-5.1M22 8v6"/></svg>
+            <span id="levelLabel">Pilih Jenjang</span>
+            <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="dropdown-menu level-menu is-open">
+            <button class="dropdown-option" type="button" data-value="SMP">
+              <strong>SMP</strong><small>Kelas 7–9</small>
+            </button>
+            <button class="dropdown-option selected" type="button" data-value="SMA/SMK">
+              <span><strong>SMA/SMK</strong><small>Kelas 10–12</small></span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="dropdown-wrap subject-wrap" data-dropdown>
+          <button class="filter-button subject-button" type="button" aria-expanded="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5c3.2-1.6 6.2-1.5 9 0v15c-2.8-1.5-5.8-1.6-9 0v-15ZM21 5.5c-3.2-1.6-6.2-1.5-9 0v15c2.8-1.5 5.8-1.6 9 0v-15Z"/></svg>
+            <span id="subjectLabel">Pilih Mata Pelajaran</span>
+            <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="dropdown-menu subject-menu">
+            <button class="dropdown-option" type="button" data-value="Matematika">Matematika</button>
+            <button class="dropdown-option" type="button" data-value="Kimia">Kimia</button>
+            <button class="dropdown-option" type="button" data-value="Kewarganegaraan">Kewarganegaraan</button>
+            <button class="dropdown-option" type="button" data-value="Pemrograman">Pemrograman</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="material-list" id="materialList" aria-label="Daftar materi">
+        <a class="material-card" href="detail-materi.html" data-subject="Matematika" data-level="SMA/SMK">
+          <span class="material-icon math-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M22 11v17M13.5 19.5h17M43 18h13M43 46h13M17 41l16 16M33 41 17 57M47.5 37v18M39 46h17"/></svg>
+          </span>
+          <span class="material-info">
+            <strong>Integral Tentu: Cara Menghitung dan Contohnya</strong>
+            <span class="material-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 8 10-5 10 5-10 5L2 8Z"/><path d="M6 10.2v5.1c3.7 2.5 8.3 2.5 12 0v-5.1M22 8v6"/></svg>Matematika <i>•</i> SMA</span>
+          </span>
+        </a>
+
+        <article class="material-card" data-subject="Kimia" data-level="SMA/SMK">
+          <span class="material-icon chemistry-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M22 9h20M27 9v20L11 54c-1.7 3 0 5 3 5h36c3 0 5-2 3-5L37 29V9M20 43h24M43 49l4-8 4 8 8 4-8 4-4 8-4-8-8-4 8-4Z"/></svg>
+          </span>
+          <span class="material-info">
+            <strong>Reaksi Redoks: Pengertian dan Penerapannya</strong>
+            <span class="material-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 8 10-5 10 5-10 5L2 8Z"/><path d="M6 10.2v5.1c3.7 2.5 8.3 2.5 12 0v-5.1M22 8v6"/></svg>Kimia <i>•</i> SMA</span>
+          </span>
+        </article>
+
+        <article class="material-card" data-subject="Kewarganegaraan" data-level="SMK">
+          <span class="material-icon globe-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="27"/><path d="M14 16c5-3 10-2 12 2 2 4-1 7-4 9-3 2-8 1-10 6M26 6c7 3 11 7 10 12-1 4-5 5-8 8-2 2-2 7 2 9 3 2 6 1 8 4 2 3-1 8 2 12M51 17c-4 1-7 4-8 8-1 4 2 7 6 7M49 47c-3 1-5 3-7 7"/></svg>
+          </span>
+          <span class="material-info">
+            <strong>Dinamika Wawasan Nusantara</strong>
+            <span class="material-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 8 10-5 10 5-10 5L2 8Z"/><path d="M6 10.2v5.1c3.7 2.5 8.3 2.5 12 0v-5.1M22 8v6"/></svg>Kewarganegaraan <i>•</i> SMK</span>
+          </span>
+        </article>
+
+        <article class="material-card" data-subject="Pemrograman" data-level="SMK">
+          <span class="material-icon laptop-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="9" y="12" width="46" height="34" rx="5"/><path d="M3 54h58"/></svg>
+          </span>
+          <span class="material-info">
+            <strong>Struktur Data: Stack dan Queue</strong>
+            <span class="material-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 8 10-5 10 5-10 5L2 8Z"/><path d="M6 10.2v5.1c3.7 2.5 8.3 2.5 12 0v-5.1M22 8v6"/></svg>Pemrograman <i>•</i> SMK</span>
+          </span>
+        </article>
+        <p class="empty-state" id="emptyState">Materi tidak ditemukan.</p>
+      </section>
+
+      <nav class="pagination" aria-label="Halaman materi">
+        <button class="page-button prev" type="button" aria-label="Halaman sebelumnya">&lt;</button>
+        <button class="page-button current" type="button" aria-current="page">1</button>
+        <button class="page-button" type="button">2</button>
+        <button class="page-button" type="button">3</button>
+        <button class="page-button" type="button">4</button>
+        <button class="page-button next" type="button" aria-label="Halaman berikutnya">&gt;</button>
+      </nav>
+    </main>
+  </div>
+  <script src="js/materi.js"></script>
+</body>
+</html>

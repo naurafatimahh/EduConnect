@@ -20,6 +20,8 @@ Proyek ini dikembangkan sebagai tugas mata kuliah Desain Web Semester 3.
 ## Fitur yang Tersedia
 
 - Beranda atau dashboard EduConnect.
+- Daftar materi dengan pencarian serta filter jenjang dan mata pelajaran.
+- Halaman detail materi Integral Tentu dengan tujuan pembelajaran dan tombol simpan.
 - Banner sambutan dan pencarian materi atau pertanyaan.
 - Pilihan jenjang SMP serta SMA/SMK.
 - Daftar pertanyaan terbaru beserta mata pelajaran dan jenjang.
@@ -68,26 +70,32 @@ Standar visual lengkap, termasuk spacing, border radius, shadow, komponen, inter
 
 ```text
 EduConnect/
-├── docs/
-│   ├── PRD.md
-│   └── DESIGN.md
 ├── css/
-│   ├── style.css
-│   └── auth.css
-├── js/
-│   ├── script.js
-│   └── auth.js
+│   ├── auth.css
+│   ├── materi.css
+│   └── style.css
+├── docs/
+│   ├── DESIGN.md
+│   └── PRD.md
 ├── img/
-│   ├── auth-illustration-transparent.png
-│   ├── auth-illustration.png
-│   └── google-icon.svg
+│   ├── character.png
+│   ├── image.png
+│   ├── integral-thumbnail.jpg
+│   └── profile.png
+├── js/
+│   ├── materi.js
+│   └── script.js
 ├── .vscode/
 │   └── settings.json
-├── index.html
+├── detail-materi.html
+├── edit-profile.html
 ├── forum.html
-├── signup.html
+├── index.html
 ├── login.html
+├── materi.html
+├── profile.html
 ├── register.html
+├── signup.html
 └── README.md
 ```
 
@@ -96,11 +104,15 @@ EduConnect/
 - `signup.html`: halaman pendaftaran akun pelajar (SMP & SMA/SMK).
 - `login.html`: halaman masuk pengguna dengan opsi email dan Google.
 - `register.html`: alias/redirect ke `signup.html`.
+- `materi.html`: daftar materi dengan pencarian dan filter; pencarian dashboard diteruskan ke halaman ini.
+- `detail-materi.html`: detail pembelajaran Integral Tentu.
 - `css/style.css`: stylesheet utama dan gaya responsif.
 - `css/auth.css`: stylesheet khusus halaman autentikasi (Sign Up & Log In) sesuai Figma.
+- `css/materi.css`: stylesheet halaman daftar dan detail materi, diselaraskan dengan palet utama EduConnect.
 - `js/script.js`: script animasi halus dan interaksi dashboard.
-- `js/auth.js`: interaksi form autentikasi (toggle password, validasi, simulasi login/daftar, dsb).
-- `img/`: aset gambar project dan ilustrasi karakter Maus Bullhorst.
+- `js/materi.js`: interaksi pencarian/filter materi dan simulasi simpan materi.
+- `img/`: aset gambar project yang sudah tersedia.
+- `img/integral-thumbnail.jpg`: thumbnail untuk halaman detail materi Integral Tentu.
 - `docs/PRD.md`: rancangan kebutuhan, alur pengguna, ruang lingkup, dan kriteria penerimaan.
 - `docs/DESIGN.md`: sitemap, pedoman visual, komponen, responsivitas, dan spesifikasi desain.
 
@@ -126,6 +138,7 @@ Saat ini implementasi mencakup tampilan front-end prototipe:
 
 - Halaman Beranda tersedia.
 - Halaman Forum tersedia.
+- Halaman daftar materi dan detail Integral Tentu tersedia.
 - Navigasi antarsumber halaman tersedia.
-- Pencarian, pengiriman pertanyaan, pengiriman jawaban, autentikasi, database, dan backend belum terimplementasi.
+- Pencarian dashboard diteruskan ke daftar materi, dan pencarian/filter di halaman materi berfungsi; pengiriman pertanyaan, pengiriman jawaban, autentikasi nyata, database, dan backend belum terimplementasi.
 - Konten yang ditampilkan merupakan data statis/simulasi.
