@@ -72,22 +72,35 @@ EduConnect/
 │   ├── PRD.md
 │   └── DESIGN.md
 ├── css/
-│   └── style.css
+│   ├── style.css
+│   └── auth.css
 ├── js/
-│   └── script.js
+│   ├── script.js
+│   └── auth.js
 ├── img/
+│   ├── auth-illustration-transparent.png
+│   ├── auth-illustration.png
+│   └── google-icon.svg
 ├── .vscode/
 │   └── settings.json
 ├── index.html
 ├── forum.html
+├── signup.html
+├── login.html
+├── register.html
 └── README.md
 ```
 
 - `index.html`: halaman beranda/dashboard.
 - `forum.html`: halaman forum diskusi.
+- `signup.html`: halaman pendaftaran akun pelajar (SMP & SMA/SMK).
+- `login.html`: halaman masuk pengguna dengan opsi email dan Google.
+- `register.html`: alias/redirect ke `signup.html`.
 - `css/style.css`: stylesheet utama dan gaya responsif.
-- `js/script.js`: script animasi halus dan interaksi sederhana.
-- `img/`: aset gambar project.
+- `css/auth.css`: stylesheet khusus halaman autentikasi (Sign Up & Log In) sesuai Figma.
+- `js/script.js`: script animasi halus dan interaksi dashboard.
+- `js/auth.js`: interaksi form autentikasi (toggle password, validasi, simulasi login/daftar, dsb).
+- `img/`: aset gambar project dan ilustrasi karakter Maus Bullhorst.
 - `docs/PRD.md`: rancangan kebutuhan, alur pengguna, ruang lingkup, dan kriteria penerimaan.
 - `docs/DESIGN.md`: sitemap, pedoman visual, komponen, responsivitas, dan spesifikasi desain.
 
