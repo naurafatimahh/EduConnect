@@ -70,49 +70,59 @@ Standar visual lengkap, termasuk spacing, border radius, shadow, komponen, inter
 
 ```text
 EduConnect/
+├── assets/
+│   └── images/
+│       ├── character.png
+│       ├── image.png
+│       ├── integral-thumbnail.jpg
+│       └── profile.png
 ├── css/
-│   ├── auth.css
-│   ├── materi.css
-│   └── style.css
-├── docs/
-│   ├── DESIGN.md
-│   └── PRD.md
-├── img/
-│   ├── character.png
-│   ├── image.png
-│   ├── integral-thumbnail.jpg
-│   └── profile.png
+│   ├── components/
+│   │   └── common.css
+│   └── pages/
+│       ├── auth.css
+│       ├── edit-profile.css
+│       ├── forum.css
+│       ├── home.css
+│       ├── materi.css
+│       └── profile.css
 ├── js/
 │   ├── materi.js
 │   └── script.js
+├── docs/
+│   ├── DESIGN.md
+│   └── PRD.md
+├── pages/
+│   ├── detail-materi.html
+│   ├── edit-profile.html
+│   ├── forum.html
+│   ├── login.html
+│   ├── materi.html
+│   ├── profile.html
+│   ├── question-detail.html
+│   ├── register.html
+│   └── signup.html
 ├── .vscode/
 │   └── settings.json
-├── detail-materi.html
-├── edit-profile.html
-├── forum.html
 ├── index.html
-├── login.html
-├── materi.html
-├── profile.html
-├── register.html
-├── signup.html
 └── README.md
 ```
 
 - `index.html`: halaman beranda/dashboard.
-- `forum.html`: halaman forum diskusi.
-- `signup.html`: halaman pendaftaran akun pelajar (SMP & SMA/SMK).
-- `login.html`: halaman masuk pengguna dengan opsi email dan Google.
-- `register.html`: alias/redirect ke `signup.html`.
-- `materi.html`: daftar materi dengan pencarian dan filter; pencarian dashboard diteruskan ke halaman ini.
-- `detail-materi.html`: detail pembelajaran Integral Tentu.
-- `css/style.css`: stylesheet utama dan gaya responsif.
-- `css/auth.css`: stylesheet khusus halaman autentikasi (Sign Up & Log In) sesuai Figma.
-- `css/materi.css`: stylesheet halaman daftar dan detail materi, diselaraskan dengan palet utama EduConnect.
+- `pages/`: semua halaman selain beranda.
+- `pages/forum.html`: halaman forum diskusi.
+- `pages/signup.html`: halaman pendaftaran akun pelajar (SMP & SMA/SMK).
+- `pages/login.html`: halaman masuk pengguna dengan opsi email dan Google.
+- `pages/register.html`: alias/redirect ke `signup.html`.
+- `pages/materi.html`: daftar materi dengan pencarian dan filter; pencarian dashboard diteruskan ke halaman ini.
+- `pages/detail-materi.html`: detail pembelajaran Integral Tentu.
+- `pages/question-detail.html`: detail pertanyaan dan diskusi jawaban.
+- `css/components/common.css`: gaya komponen bersama.
+- `css/pages/`: stylesheet khusus tiap halaman.
 - `js/script.js`: script animasi halus dan interaksi dashboard.
 - `js/materi.js`: interaksi pencarian/filter materi dan simulasi simpan materi.
-- `img/`: aset gambar project yang sudah tersedia.
-- `img/integral-thumbnail.jpg`: thumbnail untuk halaman detail materi Integral Tentu.
+- `assets/images/`: aset gambar project.
+- `assets/images/integral-thumbnail.jpg`: thumbnail untuk halaman detail materi Integral Tentu.
 - `docs/PRD.md`: rancangan kebutuhan, alur pengguna, ruang lingkup, dan kriteria penerimaan.
 - `docs/DESIGN.md`: sitemap, pedoman visual, komponen, responsivitas, dan spesifikasi desain.
 

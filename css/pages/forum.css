@@ -1,0 +1,102 @@
+﻿.forum-title {
+  font-size: 1.55rem;
+  color: #0f172a;
+}
+
+.btn-ajukan-pertanyaan {
+  background-color: #1d68f5;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-ajukan-pertanyaan:hover {
+  background-color: #1554c9;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.search-forum-inner {
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 10px;
+  padding: 10px 16px;
+  transition: border-color 0.2s ease;
+}
+
+.search-forum-inner:focus-within {
+  border-color: #1d68f5 !important;
+}
+
+.input-forum-search {
+  font-size: 0.95rem;
+}
+
+.input-forum-search::placeholder {
+  color: #94a3b8;
+}
+
+.card-forum {
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 16px;
+  transition: all 0.2s ease;
+}
+
+.card-forum:hover {
+  border-color: #93c5fd !important;
+  box-shadow: 0 4px 14px rgba(29, 104, 245, 0.05);
+}
+
+.user-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.user-sub {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.badge-forum-mapel {
+  background-color: #eaf2ff;
+  color: #1d68f5;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+
+.badge-forum-jenjang {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+
+.forum-question-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.forum-question-desc {
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.forum-divider {
+  border-color: #f1f5f9;
+  opacity: 1;
+}
+
+html {

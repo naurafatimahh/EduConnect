@@ -1,0 +1,236 @@
+.profile-heading h1 {
+  color: var(--color-text-heading);
+  font-size: 1.55rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.profile-heading p {
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
+}
+
+.panel-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+}
+
+.edit-profile-panel {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 28px;
+  padding: 28px;
+}
+
+.photo-column {
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-right: 28px;
+}
+
+.photo-preview {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+  margin-bottom: 16px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+}
+
+.photo-button {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 8px 18px;
+}
+
+.photo-column p {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.edit-profile-form {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.edit-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 20px;
+}
+
+.edit-field.full {
+  grid-column: 1 / -1;
+}
+
+.edit-field label {
+  color: var(--color-text-primary);
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.edit-field .form-control,
+.edit-field .form-select {
+  border: 1px solid var(--color-border);
+  background: #f8fafc;
+  border-radius: 9px;
+  min-height: 46px;
+  font-size: 0.88rem;
+}
+
+.edit-field textarea.form-control {
+  resize: vertical;
+}
+
+.edit-form-footer {
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 22px;
+  padding-top: 18px;
+}
+
+.profile-cancel-button,
+.profile-save-button {
+  min-height: 44px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  text-decoration: none;
+}
+
+.profile-cancel-button {
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+}
+
+.profile-save-button {
+  border: none;
+  background: var(--color-primary);
+  color: var(--color-surface);
+  min-width: 180px;
+}
+
+.profile-save-button:hover {
+  background: var(--color-primary-hover);
+}
+
+.profile-toast {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  background: #16a34a;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 12px 16px;
+  transition: 0.25s ease;
+}
+
+.profile-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 991.98px) {
+  .profile-layout {
+    grid-template-columns: 260px minmax(0, 1fr);
+  }
+
+  .edit-profile-panel {
+    grid-template-columns: 180px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .profile-summary {
+    min-height: 320px;
+  }
+
+  .edit-profile-panel {
+    grid-template-columns: 150px minmax(0, 1fr);
+    padding: 20px;
+  }
+}
+
+@media (max-width: 580px) {
+  .profile-left,
+  .profile-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-tabs {
+    gap: 12px;
+    overflow-x: auto;
+  }
+
+  .profile-tab {
+    white-space: nowrap;
+  }
+
+  .edit-profile-panel {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .photo-column {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    padding: 0 0 18px;
+  }
+
+  .edit-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .edit-field.full {
+    grid-column: auto;
+  }
+
+  .edit-form-footer {
+    flex-direction: column-reverse;
+  }
+
+  .profile-cancel-button,
+  .profile-save-button {
+    width: 100%;
+  }
+}
