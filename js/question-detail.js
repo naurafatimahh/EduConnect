@@ -1,10 +1,7 @@
-/**
- * EduConnect - Script Interaktivitas Halaman Detail Pertanyaan
- * Dibuat untuk simulasi interaksi front-end responsif dan dinamis
- */
+
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Inisialisasi fitur
+
   initLikePertanyaan();
   initBookmarkPertanyaan();
   initSharePertanyaan();
@@ -14,9 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFilterJawaban();
 });
 
-/**
- * Menampilkan Toast Notifikasi
- */
+
 function showToast(message, iconClass = 'bi-check-circle-fill text-success') {
   let toast = document.getElementById('eduToast');
   if (!toast) {
@@ -34,9 +29,7 @@ function showToast(message, iconClass = 'bi-check-circle-fill text-success') {
   }, 3200);
 }
 
-/**
- * Interaksi Tombol Upvote / Suka pada Pertanyaan Utama
- */
+
 function initLikePertanyaan() {
   const btnLike = document.getElementById('btnLikePertanyaan');
   if (!btnLike) return;
@@ -65,9 +58,7 @@ function initLikePertanyaan() {
   });
 }
 
-/**
- * Interaksi Tombol Simpan / Bookmark Pertanyaan
- */
+
 function initBookmarkPertanyaan() {
   const btnBookmark = document.getElementById('btnBookmarkPertanyaan');
   if (!btnBookmark) return;
@@ -95,9 +86,7 @@ function initBookmarkPertanyaan() {
   });
 }
 
-/**
- * Interaksi Tombol Bagikan / Salin Tautan
- */
+
 function initSharePertanyaan() {
   const btnShare = document.getElementById('btnSharePertanyaan');
   if (!btnShare) return;
@@ -118,9 +107,7 @@ function initSharePertanyaan() {
   });
 }
 
-/**
- * Interaksi Vote "Membantu" pada Setiap Jawaban
- */
+
 function initVoteJawaban() {
   document.addEventListener('click', (e) => {
     const btnVote = e.target.closest('.btn-vote-jawaban');
@@ -147,9 +134,7 @@ function initVoteJawaban() {
   });
 }
 
-/**
- * Formulir Pengiriman Jawaban Baru
- */
+
 function initFormJawaban() {
   const form = document.getElementById('formKirimJawaban');
   const textarea = document.getElementById('inputJawaban');
@@ -171,12 +156,10 @@ function initFormJawaban() {
 
     textarea.classList.remove('is-invalid');
 
-    // Buat elemen jawaban baru
     const newAnswerCard = document.createElement('div');
     newAnswerCard.className = 'card-jawaban mb-3 border-primary-subtle';
     newAnswerCard.style.animation = 'fadeIn 0.4s ease';
 
-    // Format paragraf dari input
     const paragraphs = isiJawaban.split('\n').filter(p => p.trim() !== '')
       .map(p => `<p class="mb-2">${escapeHtml(p)}</p>`).join('');
 
@@ -215,22 +198,17 @@ function initFormJawaban() {
       </div>
     `;
 
-    // Sisipkan sebelum atau sesudah daftar
     answersList.appendChild(newAnswerCard);
 
-    // Update jumlah counter
     if (countDisplay) {
       const currentTotal = parseInt(countDisplay.textContent || '3', 10);
       countDisplay.textContent = currentTotal + 1;
     }
 
-    // Reset textarea
     textarea.value = '';
 
-    // Tampilkan notifikasi sukses
     showToast('Jawaban Anda berhasil dikirim dan ditambahkan!', 'bi-check-circle-fill text-success');
 
-    // Scroll ke kartu jawaban baru
     newAnswerCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 
@@ -241,9 +219,7 @@ function initFormJawaban() {
   });
 }
 
-/**
- * Editor Toolbar untuk Penulisan Jawaban
- */
+
 function initEditorToolbar() {
   const textarea = document.getElementById('inputJawaban');
   if (!textarea) return;
@@ -283,9 +259,7 @@ function initEditorToolbar() {
   });
 }
 
-/**
- * Filter Urutan Jawaban (Terbaik / Terbaru)
- */
+
 function initFilterJawaban() {
   const filterBtns = document.querySelectorAll('.btn-filter-jawaban');
   if (!filterBtns.length) return;
@@ -306,9 +280,7 @@ function initFilterJawaban() {
   });
 }
 
-/**
- * Helper untuk sanitasi teks input
- */
+
 function escapeHtml(text) {
   const map = {
     '&': '&amp;',

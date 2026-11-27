@@ -1,7 +1,7 @@
-// Interaksi ringan untuk halaman daftar dan detail materi EduConnect.
+
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Dropdown filter: jenjang dan mata pelajaran.
+
   document.querySelectorAll('[data-dropdown]').forEach((dropdown) => {
     const trigger = dropdown.querySelector('.filter-button');
     const menu = dropdown.querySelector('.dropdown-menu');
@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (empty) empty.style.display = visible ? 'none' : 'block';
   }
 
-  // Tombol pagination hanya mengubah penanda halaman pada contoh statis ini.
   document.querySelectorAll('.pagination .page-button').forEach((button) => {
     button.addEventListener('click', () => {
       const buttons = [...document.querySelectorAll('.pagination .page-button')];
@@ -84,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Simpan materi pada halaman detail.
   const saveButton = document.getElementById('saveLesson');
   if (saveButton) {
     saveButton.addEventListener('click', () => {

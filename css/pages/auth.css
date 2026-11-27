@@ -1,7 +1,4 @@
-/* ==========================================================================
-   EduConnect - Authentication Styles (Sign Up & Log In)
-   Based on PRD, DESIGN.md, and Figma Mockup Specification
-   ========================================================================== */
+
 
 :root {
   --auth-primary: #2563EB;
@@ -221,9 +218,6 @@
   gap: 4px;
 }
 
-.auth-brand-badge {
-  display: none;
-}
 
 .auth-heading {
   font-family: 'Poppins', sans-serif;
@@ -555,6 +549,9 @@
   }
 }
 
+
+
+
 @media (max-width: 1200px) {
   .auth-container {
     grid-template-columns: 500px 1fr;
@@ -589,12 +586,13 @@
     min-height: auto;
   }
 
+  
   .auth-banner-card,
   .auth-banner-card.signup-card,
   .auth-banner-card.login-card {
     min-height: auto;
     padding: 32px 24px !important;
-    order: -1;
+    order: -1; 
     border-radius: 20px;
     background-color: var(--auth-card-bg) !important;
     overflow: hidden;

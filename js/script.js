@@ -151,4 +151,4 @@ if (profileForm) {
       window.location.href = 'profile.html';
     }
   });
-});
+};

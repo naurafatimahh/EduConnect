@@ -5,27 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EduConnect - Detail Pertanyaan</title>
 
-  <!-- Google Fonts (Poppins & Inter) -->
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap 5 CSS -->
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Bootstrap Icons -->
+  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <!-- Custom CSS -->
+  
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-  <!-- ================= TOPBAR ================= -->
+  
   <header class="topbar sticky-top">
     <div class="topbar-inner d-flex align-items-center justify-content-between px-4">
       
-      <!-- Logo EduConnect -->
+      
       <a href="../index.html" class="d-flex align-items-center gap-2 text-decoration-none logo-link">
         <div class="logo-box">
           <i class="bi bi-mortarboard-fill text-white"></i>
@@ -33,13 +33,13 @@
         <span class="logo-text">EduConnect</span>
       </a>
 
-      <!-- Quick Search Bar (Header) -->
+      
       <div class="d-none d-md-flex align-items-center bg-light border rounded-pill px-3 py-1" style="width: 320px;">
         <i class="bi bi-search text-muted me-2"></i>
         <input type="text" class="form-control form-control-sm border-0 bg-transparent shadow-none" placeholder="Cari materi atau pertanyaan...">
       </div>
 
-      <!-- User Action Icons -->
+      
       <div class="d-flex align-items-center gap-3">
         <a href="#" class="nav-icon-btn position-relative" title="Notifikasi">
           <i class="bi bi-bell"></i>
@@ -55,10 +55,10 @@
     </div>
   </header>
 
-  <!-- ================= DASHBOARD LAYOUT ================= -->
+  
   <div class="dashboard-body">
 
-    <!-- ================= SIDEBAR NAV ================= -->
+    
     <aside class="sidebar">
       <nav class="sidebar-nav">
         <ul class="nav flex-column gap-2">
@@ -95,11 +95,11 @@
       </nav>
     </aside>
 
-    <!-- ================= MAIN CONTENT ================= -->
+    
     <main class="main-content">
       <div class="content-container">
 
-        <!-- Navigasi Breadcrumbs & Tombol Kembali -->
+        
         <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-custom mb-0">
@@ -116,16 +116,16 @@
           </a>
         </div>
 
-        <!-- Layout Grid Utama (Konten Pertanyaan & Sidebar Informasi) -->
+        
         <div class="row g-4">
 
-          <!-- KOLOM KIRI (KONTEN UTAMA: DETAIL PERTANYAAN, JAWABAN, FORM) -->
+          
           <div class="col-12 col-lg-8">
 
-            <!-- 1. KARTU DETAIL PERTANYAAN -->
+            
             <article class="card-detail-pertanyaan mb-4">
               
-              <!-- Meta Penanya & Kategori -->
+              
               <div class="d-flex align-items-start justify-content-between flex-wrap gap-2 mb-3">
                 <div class="d-flex align-items-center gap-3">
                   <div class="detail-user-avatar">
@@ -144,7 +144,7 @@
                   </div>
                 </div>
 
-                <!-- Badges Mapel & Jenjang -->
+                
                 <div class="d-flex align-items-center gap-2 flex-wrap">
                   <span class="badge-mapel">Matematika</span>
                   <span class="badge-jenjang">SMA/SMK</span>
@@ -154,12 +154,12 @@
                 </div>
               </div>
 
-              <!-- Judul Pertanyaan -->
+              
               <h1 class="pertanyaan-title">
                 Bagaimana cara menyelesaikan persamaan kuadrat dengan rumus abc?
               </h1>
 
-              <!-- Isi Deskripsi Pertanyaan -->
+              
               <div class="pertanyaan-body">
                 <p>
                   Halo teman-teman dan tutor di EduConnect, saya sedang mempelajari bab <strong>Persamaan dan Fungsi Kuadrat</strong> di kelas 11 SMA. Saya masih sering ragu saat menentukan nilai diskriminan dan memasukkannya ke dalam rumus abc kuadratik.
@@ -168,7 +168,7 @@
                   Berikut adalah contoh persamaan kuadrat yang sedang saya selesaikan:
                 </p>
 
-                <!-- Box Rumus Soal -->
+                
                 <div class="formula-highlight-box">
                   <div class="text-muted small fw-medium mb-1">Contoh Soal:</div>
                   <div class="formula-display">2x² + 5x - 3 = 0</div>
@@ -185,7 +185,7 @@
                 </p>
               </div>
 
-              <!-- Tombol Aksi Pertanyaan (Like, Simpan, Share) -->
+              
               <div class="pertanyaan-actions">
                 <button class="btn-action" id="btnLikePertanyaan">
                   <i class="bi bi-arrow-up-circle"></i>
@@ -210,10 +210,10 @@
 
             </article>
 
-            <!-- 2. SECTION DAFTAR JAWABAN -->
+            
             <section class="section-jawaban">
               
-              <!-- Header Jawaban & Filter -->
+              
               <div class="answers-header">
                 <div class="d-flex align-items-center gap-2">
                   <h5 class="fw-bold mb-0 text-dark">
@@ -232,19 +232,19 @@
                 </div>
               </div>
 
-              <!-- Container List Jawaban -->
+              
               <div id="daftarJawaban" class="d-flex flex-column gap-4">
 
-                <!-- JAWABAN 1: PENANDA JAWABAN TERBAIK (FR-09) -->
+                
                 <div class="card-jawaban card-jawaban-terbaik">
                   
-                  <!-- Banner Jawaban Terbaik -->
+                  
                   <div class="badge-terbaik-banner">
                     <i class="bi bi-patch-check-fill"></i>
                     <span>Jawaban Terbaik • Dipilih oleh Penanya</span>
                   </div>
 
-                  <!-- Profil Penjawab -->
+                  
                   <div class="d-flex align-items-start gap-3 mb-3">
                     <div class="detail-user-avatar user-green">
                       SN
@@ -271,7 +271,7 @@
                     </div>
                   </div>
 
-                  <!-- Isi Jawaban Terbaik -->
+                  
                   <div class="pertanyaan-body ps-md-5 ms-md-2 mb-3">
                     <p>
                       Halo Ahmad! Rumus <strong>abc</strong> (rumus kuadrat) adalah metode pasti yang selalu berhasil menyelesaikan semua jenis persamaan kuadrat bentuk <code>ax² + bx + c = 0</code>.
@@ -286,7 +286,7 @@
 
                     <p>Berikut adalah penyelesaian langkah demi langkah untuk persamaan <strong>2x² + 5x - 3 = 0</strong>:</p>
 
-                    <!-- Langkah 1 -->
+                    
                     <div class="step-card">
                       <div class="step-title">
                         <span class="step-number step-green">1</span>
@@ -300,7 +300,7 @@
                       </p>
                     </div>
 
-                    <!-- Langkah 2 -->
+                    
                     <div class="step-card">
                       <div class="step-title">
                         <span class="step-number step-green">2</span>
@@ -314,7 +314,7 @@
                       </p>
                     </div>
 
-                    <!-- Langkah 3 -->
+                    
                     <div class="step-card">
                       <div class="step-title">
                         <span class="step-number step-green">3</span>
@@ -326,7 +326,7 @@
                       </p>
                     </div>
 
-                    <!-- Langkah 4 -->
+                    
                     <div class="step-card">
                       <div class="step-title">
                         <span class="step-number step-green">4</span>
@@ -347,7 +347,7 @@
                     </div>
                   </div>
 
-                  <!-- Interaksi Jawaban -->
+                  
                   <div class="d-flex align-items-center justify-content-between pt-3 border-top ps-md-5 ms-md-2">
                     <button class="btn-action btn-vote-jawaban" data-count="24" data-voted="false">
                       <i class="bi bi-hand-thumbs-up"></i>
@@ -358,7 +358,7 @@
 
                 </div>
 
-                <!-- JAWABAN 2: JAWABAN LAIN -->
+                
                 <div class="card-jawaban">
                   
                   <div class="d-flex align-items-start gap-3 mb-3">
@@ -404,7 +404,7 @@
 
                 </div>
 
-                <!-- JAWABAN 3: JAWABAN LAIN -->
+                
                 <div class="card-jawaban">
                   
                   <div class="d-flex align-items-start gap-3 mb-3">
@@ -453,7 +453,7 @@
 
             </section>
 
-            <!-- 3. FORMULIR MEMBERIKAN JAWABAN (FR-06, PRD 5.4) -->
+            
             <section class="card-form-jawaban">
               
               <div class="d-flex align-items-center justify-content-between mb-3">
@@ -464,7 +464,7 @@
                 <span class="small text-muted">Bagikan pemahamanmu</span>
               </div>
 
-              <!-- Profil Pengguna yang Sedang Menjawab -->
+              
               <div class="d-flex align-items-center gap-2 mb-3 p-2 bg-light rounded-3">
                 <div class="detail-user-avatar user-blue-light" style="width: 34px; height: 34px; font-size: 0.85rem;">
                   <i class="bi bi-person-fill"></i>
@@ -474,10 +474,10 @@
                 </div>
               </div>
 
-              <!-- Form Input Jawaban -->
+              
               <form id="formKirimJawaban">
                 
-                <!-- Toolbar Format Text -->
+                
                 <div class="editor-toolbar">
                   <button type="button" class="btn-tool" data-tool="bold" title="Tebal (Bold)">
                     <i class="bi bi-type-bold"></i>
@@ -499,7 +499,7 @@
                   </span>
                 </div>
 
-                <!-- Textarea Jawaban -->
+                
                 <div class="mb-3">
                   <textarea 
                     id="inputJawaban" 
@@ -512,7 +512,7 @@
                   </div>
                 </div>
 
-                <!-- Petunjuk & Tombol Submit -->
+                
                 <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
                   <div class="small text-muted">
                     <i class="bi bi-info-circle me-1"></i>
@@ -531,10 +531,10 @@
 
           </div>
 
-          <!-- KOLOM KANAN (SIDEBAR WIDGET: STATISTIK, TERKAIT, PANDUAN) -->
+          
           <div class="col-12 col-lg-4 sidebar-widget-col">
 
-            <!-- WIDGET 1: INFORMASI PERTANYAAN -->
+            
             <div class="sidebar-widget">
               <h6 class="widget-title">
                 <i class="bi bi-info-circle text-primary"></i>
@@ -574,7 +574,7 @@
               </div>
             </div>
 
-            <!-- WIDGET 2: PERTANYAAN TERKAIT -->
+            
             <div class="sidebar-widget">
               <div class="d-flex align-items-center justify-content-between mb-3">
                 <h6 class="widget-title mb-0">
@@ -633,7 +633,7 @@
               </div>
             </div>
 
-            <!-- WIDGET 3: PANDUAN MENJAWAB EDUCONNECT -->
+            
             <div class="sidebar-widget bg-light border-0">
               <h6 class="widget-title text-dark">
                 <i class="bi bi-shield-check text-success"></i>
@@ -662,18 +662,18 @@
 
   </div>
 
-  <!-- Floating Action Button (Ajukan Pertanyaan Baru) -->
+  
   <a href="#" class="tombol-tanya-fab" title="Tanya Sekarang">
     <i class="bi bi-pencil-fill"></i>
   </a>
 
-  <!-- Toast Notification Container -->
+  
   <div id="eduToast" class="toast-notif" role="alert" aria-live="assertive" aria-atomic="true"></div>
 
-  <!-- Bootstrap 5 JS Bundle -->
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Custom Detail Pertanyaan Script -->
+  
   <script src="../js/question-detail.js"></script>
 
 </body>
